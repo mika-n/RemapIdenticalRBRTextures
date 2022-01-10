@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>mika-n and RallySimFans team</Authors>
+    <Company>www.RallySimFans.hu</Company>
+    <Description>Identifies duplicated textures in Richard Burns Rally RBZ files, removes duplicates and creates a symbolic link between the removed file and the one preserved copy of the identical texture file.</Description>
+    <Copyright>Copyright (c) 2021-2022 mika-n. All rights reserved. Free tool for all RBR map authors. Not for commercial use without a permission from the author. Use at your own risk.</Copyright>
+    <PackageProjectUrl>www.rallysimfans.hu</PackageProjectUrl>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DefineConstants />
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+
+</Project>
