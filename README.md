@@ -16,15 +16,16 @@ How this works?
 
 Note! Identical file here means that the file content is one-on-one identical in a binary level (not a filename match)
  
-Shows usage info:
-  RemapIdenticalRBRTextures.exe   
+ Shows usage info:
+   RemapIdenticalRBRTextures.exe   
 
-Identifies duplicated textures in track 972 map pack (Maps\Tracks.ini [Map972] map), but does NOT update the map pack.
-This command can be used to "simulate" the process and see the end result in c:\backup\rbr folder without actually modifying anything.
+ Identifies duplicated textures in track 972 map pack (Maps\Tracks.ini [Map972] map), but does NOT update the map pack. 
+ This command can be used to "simulate" the process and see the end result in c:\backup\rbr folder without actually modifying anything.
    RemapIdenticalRBRTextures.exe -rbrFolder "c:\games\Richard Burns Rally" -track 972 -backupFolder c:\backup\rbr
 
  Identifies duplicated textures in track 972 map pack, deletes duplicates and modifies the original RBZ map pack (-DeleteDuplicates option)
    RemapIdenticalRBRTextures.exe -rbrFolder "c:\games\Richard Burns Rally" -track 972 -backupFolder c:\backup\rbr -DeleteDuplicates
    
- Copyright (c) 2021-2022 MIKA-N. All rights reserved. This is a free tool for all RBR map authors, but not for commercial use without a permission from the author. Use at your own risk.
- RallySimFans - www.rallysimfans.hu
+Copyright (c) 2021-2022 MIKA-N. All rights reserved. This is a free tool for all RBR map authors, but not for commercial use without a permission from the author. Use at your own risk.
+ 
+RallySimFans - www.rallysimfans.hu
