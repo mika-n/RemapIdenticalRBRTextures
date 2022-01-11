@@ -12,7 +12,7 @@ This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures
 - Extracts map specific textures.rbz files to a temporary folder
 - Identifies duplicated copies of DDS file, removes duplicated copies and leaves just one copy of the DDS texture file.
 - Creates TextureFilenameMap<MapID>.ini file with links between a removed DDS file and the one preserved copy of the identical file.
-- RallySimFans (RSF) plugin uses the TextureFilenameMap<MapID>.ini file to instruct RBR to use a remapped texture instead of the delete duplicated copy.
+- RallySimFans (RSF) plugin uses the TextureFilenameMap<MapID>.ini file to instruct RBR to use a remapped texture instead of the deleted duplicated copy.
 
 Note! Identical file here means that the file content is one-on-one identical in a binary level (not a filename match)
  
