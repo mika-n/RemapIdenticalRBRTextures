@@ -8,6 +8,7 @@ This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures
 - Faster map loading because RBR doesn't re-load a texture if an identical copy is already loaded, plus RBR can read smaller textures.rbz files a bit faster (couple nano seconds faster in SSD systems, 5 nano seconds in historical HDD systems).
 - Wallaby and BlenderRBRExporter doesn't identify identical files yet, so this tool fills the gap and works with all maps created with any tool (even for old maps released years ago).
 
+\
 *How this works?*
 - Extracts map specific textures.rbz files to a temporary folder
 - Identifies duplicated copies of DDS file, removes duplicated copies and leaves just one copy of the DDS texture file.
@@ -28,8 +29,8 @@ Note! Identical file here means that the file content is one-on-one identical in
    RemapIdenticalRBRTextures.exe -rbrFolder "c:\games\Richard Burns Rally" -track 972 -backupFolder c:\backup\rbr -DeleteDuplicates
 ```
 
- 
-*Recommended map delivery folder structure with RallySimFans RBR mode*
+\
+*Recommended map delivery folder structure with RallySimFans RBR mod*
  - RallySimFans (RSF) nowadays delivers new classic maps using the following folder logic (note the stage specific subfolder in RBR Maps folder and stage specific TracksXXX.ini, TrackSettingsXXX.ini and TextureFilenameMapXXX.ini files here. No need to merge values at installation time to the common maps\tracks.ini and maps\tracksettings.ini files)
  
  ```
@@ -41,7 +42,8 @@ Note! Identical file here means that the file content is one-on-one identical in
  c:\games\rbr\Maps\427-Zaton\track-427_N_textures.rbz
  c:\games\rbr\Maps\427-Zaton\track-427_N.lbs
  ```
-  
+
+\
 Copyright (c) 2021-2022 MIKA-N. All rights reserved. This is a free tool for all RBR map authors, but not for commercial use without a permission from the author. Use at your own risk.
  
 RallySimFans - www.rallysimfans.hu
