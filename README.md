@@ -27,6 +27,7 @@ Note! Identical file here means that the file content is one-on-one identical in
  Identifies duplicated textures in track 972 map pack, deletes duplicates and modifies the original RBZ map pack (-DeleteDuplicates option)
    RemapIdenticalRBRTextures.exe -rbrFolder "c:\games\Richard Burns Rally" -track 972 -backupFolder c:\backup\rbr -DeleteDuplicates
 ```
+
  
 *Recommended map delivery folder structure with RallySimFans RBR mode*
  - RallySimFans (RSF) nowadays delivers new classic maps using the following folder logic (note the stage specific subfolder in RBR Maps folder and stage specific TracksXXX.ini, TrackSettingsXXX.ini and TextureFilenameMapXXX.ini files here. No need to merge values at installation time to the common maps\tracks.ini and maps\tracksettings.ini files)
