@@ -28,6 +28,19 @@ Note! Identical file here means that the file content is one-on-one identical in
    RemapIdenticalRBRTextures.exe -rbrFolder "c:\games\Richard Burns Rally" -track 972 -backupFolder c:\backup\rbr -DeleteDuplicates
 ```
  
+*Recommended map delivery folder structure with RallySimFans RBR mode*
+ - RallySimFans (RSF) nowadays delivers new classic maps using the following folder logic (note the stage specific subfolder in RBR Maps folder and stage specific TracksXXX.ini, TrackSettingsXXX.ini and TextureFilenameMapXXX.ini files here. No need to merge values at installation time to the common maps\tracks.ini and maps\tracksettings.ini files)
+ 
+ ```
+ c:\games\rbr\Maps\
+ c:\games\rbr\Maps\427-Zaton\
+ c:\games\rbr\Maps\427-Zaton\Tracks427.ini
+ c:\games\rbr\Maps\427-Zaton\TrackSettings427.ini
+ c:\games\rbr\Maps\427-Zaton\TextureFilenameMap427.ini
+ c:\games\rbr\Maps\427-Zaton\track-427_N_textures.rbz
+ c:\games\rbr\Maps\427-Zaton\track-427_N.lbs
+ ```
+  
 Copyright (c) 2021-2022 MIKA-N. All rights reserved. This is a free tool for all RBR map authors, but not for commercial use without a permission from the author. Use at your own risk.
  
 RallySimFans - www.rallysimfans.hu
