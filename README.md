@@ -58,6 +58,7 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
  c:\games\rbr\Maps\427-Zaton\track-427_O_textures.rbz
  c:\games\rbr\Maps\427-Zaton\track-427_N.lbs
  c:\games\rbr\Maps\427-Zaton\track-427_O.lbs
+ (plus other map files)
  ```
 
 \
