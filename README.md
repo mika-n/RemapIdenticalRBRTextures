@@ -62,6 +62,22 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
  ```
 
 \
+\
+*TrackXXX.ini options for custom maps in RallySimFans (RSF) plugin*
+ 
+Example of c:\games\rbr\Maps\494-MyStage\Tracks494.ini
+```
+[Map494]
+TrackName=Maps\494-MyStage\track-494
+StageName=My new custom stage
+Length=2.3
+Tyre=0                  ; Tyre 0 tarmac, 3 gravel, 6 snow
+;Surface=0              ; Optional if TYRE option missing. 0 tarmac, 1 gravel, 2 snow
+Author=Foobar Team      ; Optional attribute. Shown for custom maps in RSF stage selection list
+Country=FI              ; Optional attribute (ISO-2 country code). A flag shown for custom maps in RSF stage selection list
+```
+
+\
 Copyright (c) 2021-2022 MIKA-N. All rights reserved. This is a free tool for all RBR map authors, but not for commercial use without a permission from the author. Use at your own risk.
  
 RallySimFans - www.rallysimfans.hu
