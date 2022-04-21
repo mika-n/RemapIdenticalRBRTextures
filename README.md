@@ -2,14 +2,14 @@
 
 This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures.rbz archive files, removes duplicates and re-packs the RBZ file.
 
-*What are the benefits of doing all this for RBR maps?*
+**What are the benefits of doing all this for RBR maps?**
 - Smaller map pack size in bytes (the size of track-1234_M/N/E/O_textures.rbz files is reduced when there are no duplicated files). 
 - Smaller map pack saves download bandwidth and diskspace in PC.
 - Faster map loading because RBR doesn't re-load a texture if an identical copy is already loaded, plus RBR can read smaller textures.rbz files a bit faster (couple nano seconds faster in SSD systems, 5 nano seconds in historical HDD systems).
 - Wallaby and BlenderRBRExporter doesn't identify identical files yet, so this tool fills the gap and works with all maps created with any tool (even for old maps released years ago).
 
 \
-*How this works?*
+**How this works?**
 - Extracts map specific textures.rbz files to a temporary folder
 - Identifies duplicated copies of DDS file, removes duplicated copies and leaves just one copy of the DDS texture file.
 - Creates TextureFilenameMap<MapID>.ini file with links between a removed DDS file and the one preserved copy of the identical file.
@@ -45,13 +45,14 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
  
  
 \
-*Recommended map delivery folder structure with RallySimFans RBR mod*
+**Recommended map delivery folder structure with RallySimFans RBR mod**
+ 
  - RallySimFans (RSF) nowadays delivers new classic maps using the following folder logic (note the stage specific subfolder in RBR Maps folder and stage specific TracksXXX.ini, TrackSettingsXXX.ini and TextureFilenameMapXXX.ini files here. No need to merge values at installation time to the common maps\tracks.ini and maps\tracksettings.ini files)
  
  ```
  c:\games\rbr\Maps\
  c:\games\rbr\Maps\427-Zaton\
- c:\games\rbr\Maps\427-Zaton\Tracks427.ini
+ c:\games\rbr\Maps\427-Zaton\Tracks427.ini  (Note! See the next paragraph for more info about TracksXXX.ini)
  c:\games\rbr\Maps\427-Zaton\TrackSettings427.ini
  c:\games\rbr\Maps\427-Zaton\TextureFilenameMap427.ini
  c:\games\rbr\Maps\427-Zaton\track-427_N_textures.rbz
@@ -63,7 +64,9 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
 
 \
 \
-*TrackXXX.ini options for custom maps in RallySimFans (RSF) plugin*
+**TrackXXX.ini options for custom maps in RallySimFans (RSF) plugin**
+
+Each map in RBR needs to have a track definition file listing where are track-XXX_textures.rbz, track-XXX.lbs and other track data files. Traditionally all maps in RBR shared the same Maps\Tracks.ini file. This complicated map installations because people installing custom maps had to manually edit Tracks.ini file and add the new [MapXXX] section in there. In RallySimFans RSF RBR environment this is no longer needed because each map can supply their own copy of TracksXXX.ini file in the map specific subfolder. Installation of a new custom map is now simple as unzipping MyStage.zip file into RBR folder.
  
 Example of c:\games\rbr\Maps\494-MyStage\Tracks494.ini
 ```
@@ -72,9 +75,17 @@ TrackName=Maps\494-MyStage\track-494
 StageName=My new custom stage
 Length=2.3
 Tyre=0                  ; Tyre 0 tarmac, 3 gravel, 6 snow
-;Surface=0              ; Optional if TYRE option missing. 0 tarmac, 1 gravel, 2 snow
+;Surface=0              ; Optional if TYRE option missing: 0 tarmac, 1 gravel, 2 snow
 Author=Foobar Team      ; Optional attribute. Shown for custom maps in RSF stage selection list
 Country=FI              ; Optional attribute (ISO-2 country code). A flag shown for custom maps in RSF stage selection list
+
+; Following options in TracksXXX.ini file are optional. Map author can use these to instruct RSF Practice and Hotlap
+; racing menu to use these as default selections
+DefaultWeatherSky = N_hazy_clear
+DefaultWeather    = bad
+DefaultStageWear  = worn
+DefaultWetness    = damp
+DefaultTyre       = tarmac intermediate
 ```
 
 \
