@@ -67,6 +67,10 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
 **TrackXXX.ini options for custom maps in RallySimFans (RSF) plugin**
 
 Each map in RBR needs to have a track definition file listing where are track-XXX_textures.rbz, track-XXX.lbs and other track data files. Traditionally all maps in RBR shared the same Maps\Tracks.ini file. This complicated map installations because people installing custom maps had to manually edit Tracks.ini file and add the new [MapXXX] section in there. In RallySimFans RSF RBR environment this is no longer needed because each map can supply their own copy of TracksXXX.ini file in the map specific subfolder. Installation of a new custom map is now simple as unzipping MyStage.zip file into RBR folder.
+
+When you publish a custom test/development map to RSF RBR installation then please choose any unused map ID for the map. _RSF has reserved 490-499 range for custom test_ maps and none of the official maps use that range, but technically maps can use any map ID. _Also, RSF uses 1000-1999 range with BTB online maps_, so try to avoid that range even when techically BTB maps work a bit differently. So, **a good candidate as a map ID for your custom map is**
+- 490-499
+- 3000+
  
 Example of c:\games\rbr\Maps\494-MyStage\Tracks494.ini
 ```
