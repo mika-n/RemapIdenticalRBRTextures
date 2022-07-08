@@ -89,6 +89,14 @@ DefaultWeather    = bad
 DefaultStageWear  = worn
 DefaultWetness    = damp
 DefaultTyre       = tarmac intermediate
+
+; Optional stage specific custom StartClock times at the startline HHMM (when a stage shows the start clock object).
+; RSF synchronizes the start clock with 3-2-1 countdown and second portion of the time is shown as 50 to 59 and "GO" is at specified time as HH:MM:00 (WRC logic).
+; RSFLauncher has an option to customize the start clock to show countdown seconds also (7-6-5-4-3-2-1-GO)
+StartClockMorning = 0812
+StartClockNoon = 1315
+StartClockEvening = 2000
+StartClockNight = 2345
 ```
 
 When a new map is included as an official RSF online map then RSF admins assigns the new public map ID (the next free map ID) for the map. When a new map is close to be released and is in beta testing then RSF admins can reserve the public map ID for the map even before the final release, so a map author can start using that map ID while testing the map. In this case the map author should contact RSF admins in RSF Discord channel.
