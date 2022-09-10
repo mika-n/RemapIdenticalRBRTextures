@@ -571,8 +571,10 @@ namespace RemapIdenticalRBRTextures
             Directory.Delete(tempZipFolder, true);
 
             // Backup the original RBZ archive file if the new RBZ is smaller than the original one
+            idx = 0;
             foreach (var rbzDir in dirs)
             {
+                idx++;
                 rbzArchiveFileName = rbzDir.Name;
                 tempZipFile = Path.Combine(backupFolder + "\\", "new_" + rbzArchiveFileName);
                 if (Path.GetExtension(rbzArchiveFileName) == ".rbz")
@@ -595,11 +597,11 @@ namespace RemapIdenticalRBRTextures
                             File.Copy(rbzOrigFileName, Path.Combine(backupFolder + "\\", rbzArchiveFileName));
                         }
 
-                        Console.WriteLine($"New size {newSizeMB.ToString("N2")} MB < {oldSizeMB.ToString("N2")} MB  (Saving {(oldSizeMB - newSizeMB).ToString("N2")} MBs)");
+                        Console.WriteLine($"{idx}/{dirs.Length} {rbzArchiveFileName} new size {newSizeMB.ToString("N2")} MB < {oldSizeMB.ToString("N2")} MB  (Saving {(oldSizeMB - newSizeMB).ToString("N2")} MBs)");
                     }
                     else
                     {
-                        Console.WriteLine($"The new {rbzArchiveFileName} would not save space. Keeping the original file");
+                        Console.WriteLine($"{idx}/{dirs.Length} {rbzArchiveFileName} would not save space. Keeping the original file");
                         File.Delete(tempZipFile);
                     }
                 }
