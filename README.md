@@ -75,12 +75,13 @@ Example of c:\games\rbr\Maps\494-MyStage\Tracks494.ini
 ```
 [Map494]
 TrackName=Maps\494-MyStage\track-494
+Particles=Maps\ps_MontBlanc
 StageName=My new custom stage
 Length=2.3
 Tyre=0                  ; Tyre 0 tarmac, 3 gravel, 6 snow
 ;Surface=0              ; Optional if TYRE option missing: 0 tarmac, 1 gravel, 2 snow
 Author=Foobar Team      ; Optional attribute. Shown for custom maps in RSF stage selection list
-Country=FI              ; Optional attribute (ISO-2 country code). A flag shown for custom maps in RSF stage selection list
+CountryCode=FI          ; Optional attribute (ISO-2 country code, see www.iban.com/country-codes). A flag shown for custom maps in RSF stage selection list
 
 ; Following options in TracksXXX.ini file are optional. Map author can use these to instruct RSF Practice and Hotlap
 ; racing menu to use these as default selections
@@ -97,6 +98,15 @@ StartClockMorning = 0812
 StartClockNoon = 1315
 StartClockEvening = 2000
 StartClockNight = 2345
+
+; Optional path to the stage specific animation scripts, objects and textures. Here it is possible to define new animations
+; or to override default RBR animations (marshals, deers, birds, media people and so on).
+; In this example MyCustomAnims would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustomAnims\
+; and in there the default RBR deer animation and marshalVest texture has been customized.
+;    c:\games\rbr\Maps\494-MyStage\MyCustomAnims\scripts\load_deer_flat.lua
+;    c:\games\rbr\Maps\494-MyStage\MyCustomAnims\sgs\textures\ho_marshalvest.dds
+;
+AnimationPath=MyCustomAnims
 ```
 
 When a new map is included as an official RSF online map then RSF admins assigns the new public map ID (the next free map ID) for the map. When a new map is close to be released and is in beta testing then RSF admins can reserve the public map ID for the map even before the final release, so a map author can start using that map ID while testing the map. In this case the map author should contact RSF admins in RSF Discord channel.
