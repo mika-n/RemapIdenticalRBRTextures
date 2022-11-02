@@ -53,6 +53,8 @@ track-427_o_textures\wet\waters2.dds	 track-427_n_textures\wet\waters.dds
  c:\games\rbr\Maps\427-Zaton\Tracks427.ini  (Note! See the next paragraph for more info about TracksXXX.ini)
  c:\games\rbr\Maps\427-Zaton\TrackSettings427.ini
  c:\games\rbr\Maps\427-Zaton\TextureFilenameMap427.ini
+ c:\games\rbr\Maps\427-Zaton\427-Zaton splash1.dds    (427- filename prefix required here for the Zaton specific splash screen image)
+ c:\games\rbr\Maps\427-Zaton\427-Zaton splash2.dds    (alternative splash screen img. RSF randomizes which one to show. Max 100 alternative images)
  c:\games\rbr\Maps\427-Zaton\track-427_N_textures.rbz
  c:\games\rbr\Maps\427-Zaton\track-427_O_textures.rbz
  c:\games\rbr\Maps\427-Zaton\track-427_N.lbs
