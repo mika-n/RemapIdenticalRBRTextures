@@ -103,22 +103,31 @@ StartClockNight = 2345
 
 ; Optional path to the stage specific animation scripts, objects and textures. Here it is possible to define new animations
 ; or to override default RBR animations (marshals, deers, birds, media people and so on).
-; In this example MyCustomAnims would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustomAnims\
+; In this example MyCustom would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustom\
 ; and in there the default RBR deer animation and marshalVest texture has been customized.
-;    c:\games\rbr\Maps\494-MyStage\MyCustomAnims\scripts\load_deer_flat.lua
-;    c:\games\rbr\Maps\494-MyStage\MyCustomAnims\sgs\textures\ho_marshalvest.dds
+;    c:\games\rbr\Maps\494-MyStage\MyCustom\scripts\load_deer_flat.lua
+;    c:\games\rbr\Maps\494-MyStage\MyCustom\sgs\textures\ho_marshalvest.dds
 ;
-AnimationPath=MyCustomAnims
- 
- ; Optional clouds mod to use as per-stage cloud mod. The name of the Clouds option will be used to look for Maps\494-MyStage\Clouds_MyCustom.ini
- ; or Maps\Clouds_MyCustom.ini files (the first match). Clouds_MyCustom.ini be a copy of the default Maps\Clouds.ini file where all
- ; us_xxxx texture filenames have been renamed (tip. Do find-and-replace in Notepad) for example as mod_xxxx filenames and 
- ; Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder contains mod_xxxx.dds cloud textures in dry/damp/wet folders.
- ;    Maps\494-MyStage\Clouds_MyCustom.ini or Maps\Clouds_MyCustom.ini file with custom texture filenames
- ;    Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder with custom DDS cloud texture files
- ;    (if the cloud mod is shared by several stages then use Maps folder for the ini and cloud_textures folder)
- ;
- Clouds=Clouds_MyCustom
+AnimationPath=MyCustom
+
+; Optional path to the stage specific fence texture objects.
+; In this example MyCustom would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustom\
+; and in there Textures subfolder can have overridden versions of DDS texture filenames used in the default RBR misc/Fence.dat file.
+; If the custom textures folder doesn't have certain fence texture file then RSF fallbacks to use the default RBR texture file (in Fence.dat).
+;    c:\games\rbr\Maps\494-MyStage\MyCustom\Textures\fence_tile01.dds
+;    c:\games\rbr\Maps\494-MyStage\MyCustom\Textures\ar_fence_tile.dds
+;
+FencePath=MyCustom
+
+; Optional clouds mod to use as per-stage cloud mod. The name of the Clouds option will be used to look for Maps\494-MyStage\Clouds_MyCustom.ini
+; or Maps\Clouds_MyCustom.ini files (the first match). Clouds_MyCustom.ini be a copy of the default Maps\Clouds.ini file where all
+; us_xxxx texture filenames have been renamed (tip. Do find-and-replace in Notepad) for example as mod_xxxx filenames and 
+; Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder contains mod_xxxx.dds cloud textures in dry/damp/wet folders.
+;    Maps\494-MyStage\Clouds_MyCustom.ini or Maps\Clouds_MyCustom.ini file with custom texture filenames
+;    Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder with custom DDS cloud texture files
+;    (if the cloud mod is shared by several stages then use Maps folder for the ini and cloud_textures folder)
+;
+Clouds=Clouds_MyCustom
 ```
 
 When a new map is included as an official RSF online map then RSF admins assigns the new public map ID (the next free map ID) for the map. When a new map is close to be released and is in beta testing then RSF admins can reserve the public map ID for the map even before the final release, so a map author can start using that map ID while testing the map. In this case the map author should contact RSF admins in RSF Discord channel.
