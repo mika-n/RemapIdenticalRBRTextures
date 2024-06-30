@@ -85,6 +85,8 @@ Tyre=0                  ; Tyre 0 tarmac, 3 gravel, 6 snow
 Author=Foobar Team      ; Optional attribute. Shown for custom maps in RSF stage selection list
 CountryCode=FI          ; Optional attribute (ISO-2 country code, see www.iban.com/country-codes). A flag shown for custom maps in RSF stage selection list
 
+MinimapDrawn=true       ; Optional attribute to disable the auto-drawn minimap on top of the stage loading splash screen (true by default, but you can set it to false to hide the minimap).
+
 ; Following options in TracksXXX.ini file are optional. Map author can use these to instruct RSF Practice and Hotlap
 ; racing menu to use these as default selections
 DefaultWeatherSky = N_hazy_clear
