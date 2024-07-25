@@ -106,7 +106,8 @@ StartClockNight = 2345
 ; Optional path to the stage specific animation scripts, objects and textures. Here it is possible to define new animations
 ; or to override default RBR animations (marshals, deers, birds, media people and so on).
 ; In this example MyCustom would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustom\
-; and in there the default RBR deer animation and marshalVest texture has been customized.
+; and in there the default RBR deer animation and marshalVest texture has been customized. With other animation files 
+; RSF fallbacks to use the default RBR files in c:\games\rbr\scripts and c:\games\rbr\sgs folders.
 ;    c:\games\rbr\Maps\494-MyStage\MyCustom\scripts\load_deer_flat.lua
 ;    c:\games\rbr\Maps\494-MyStage\MyCustom\sgs\textures\ho_marshalvest.dds
 ;
@@ -115,7 +116,9 @@ AnimationPath=MyCustom
 ; Optional path to the stage specific fence texture objects.
 ; In this example MyCustom would refer to the folder in c:\games\rbr\Maps\494-MyStage\MyCustom\
 ; and in there Textures subfolder can have overridden versions of DDS texture filenames used in the default RBR misc/Fence.dat file.
-; If the custom textures folder doesn't have certain fence texture file then RSF fallbacks to use the default RBR texture file (in Fence.dat).
+; If the custom textures folder doesn't have a certain fence texture file then RSF fallbacks to use the default RBR texture file (in Fence.dat).
+; Tip. You can extract a DAT file to see how those original RBR fence textures look like by using https://www.kegetys.fi/dattool-v1-01/ DATTOOL app.
+; A command line to extract a dat archive file into FENCE subfolder: DATTOOL.EXE -e fence.dat FENCE
 ;    c:\games\rbr\Maps\494-MyStage\MyCustom\Textures\fence_tile01.dds
 ;    c:\games\rbr\Maps\494-MyStage\MyCustom\Textures\ar_fence_tile.dds
 ;
