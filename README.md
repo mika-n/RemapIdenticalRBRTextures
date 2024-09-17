@@ -125,12 +125,22 @@ AnimationPath=MyCustom
 FencePath=MyCustom
 
 ; Optional clouds mod to use as per-stage cloud mod. The name of the Clouds option will be used to look for Maps\494-MyStage\Clouds_MyCustom.ini
-; or Maps\Clouds_MyCustom.ini files (the first match). Clouds_MyCustom.ini be a copy of the default Maps\Clouds.ini file where all
-; us_xxxx texture filenames have been renamed (tip. Do find-and-replace in Notepad) for example as mod_xxxx filenames and 
-; Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder contains mod_xxxx.dds cloud textures in dry/damp/wet folders.
-;    Maps\494-MyStage\Clouds_MyCustom.ini or Maps\Clouds_MyCustom.ini file with custom texture filenames
-;    Maps\494-MyStage\clouds_textures\ or Maps\clouds_textures\ folder with custom DDS cloud texture files
-;    (if the cloud mod is shared by several stages then use Maps folder for the ini and cloud_textures folder)
+; or Maps\Clouds_MyCustom.ini files (the first match). Clouds_MyCustom.ini is a copy of the default Maps\Clouds.ini file where all
+; us_xxxx texture filenames have been renamed with a custom file name (tip. Do find-and-replace in Notepad to replace us_ with MyCloud_us_ keyword).
+;
+; For example the following original text lines in the copied custom clouds INI file
+;     Texture0=MAPS\GLOBAL\SKYBOXES NEW TECH\US_CLEAR.tga_0.tga
+;     [MAPS\GLOBAL\SKYBOXES NEW TECH\US_CLEAR.tga_0.tga]
+; modified as (note the MyCloud_ prefix) in Maps\494-MyStage\Clouds_MyCustom.ini file:
+;    Texture0=MAPS\GLOBAL\SKYBOXES NEW TECH\MyCloud_US_CLEAR.tga_0.tga
+;    [MAPS\GLOBAL\SKYBOXES NEW TECH\MyCloud_US_CLEAR.tga_0.tga]
+;    ...and the same for other clouds texture definitions in the file. Each cloud texture has the TextureN and [sectionName] text lines...
+;
+; When Maps\494-MyStage\clouds_textures\ folder or Maps\clouds_textures\ folder contains MyCloud_xxx.dds textures in dry/damp/wet subfolders
+; then this stage would use a custom sky without affecting other stages (ie. the default us_xxx.dds textures in RBR Maps\clouds.rbz were not modified).
+;
+; If the cloud mod is shared by several stages then place the Clouds_MyCustom.ini and Cloud_textures folder under a common Maps folder, otherwise
+; place the Clouds_MyCustom.ini file and Cloud_textures folder under the Maps\494-MyStage\ custom stage folder.
 ;
 Clouds=Clouds_MyCustom
 ```
