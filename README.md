@@ -1,6 +1,6 @@
 # RemapIdenticalRBRTextures
 
-This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures.rbz archive files, removes duplicates and re-packs the RBZ file.
+This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures.rbz archive files, removes duplicates and re-packs the RBZ file. This tool is highly recommended when releasing RBR stages in RallySimFans RBR version (RSF admins will use this tool anyway if a stage author gives a permission to include their stage as an official RSF online map). This optimization process does not change how a stage looks like or how various surface and wetness options behave in RBR, so the end result 100% respects the artistic vision of a stage author.
 
 **What are the benefits of doing all this for RBR maps?**
 - Smaller map pack size in bytes (the size of track-1234_M/N/E/O_textures.rbz files is reduced when there are no duplicated files). 
@@ -13,7 +13,7 @@ This tool identifies identical DDS texture files in RICHARD BURNS RALLY textures
 - Extracts map specific textures.rbz files to a temporary folder
 - Identifies duplicated copies of DDS file, removes duplicated copies and leaves just one copy of the DDS texture file.
 - Creates TextureFilenameMap<MapID>.ini file with links between a removed DDS file and the one preserved copy of the identical file.
-- RBR/RSF uses the generated TextureFilenameMap<MapID>.ini file at stage load time to instruct RBR to use a remapped texture DDS file instead of the deleted duplicated copy. The remap link goes even between textures_O.rbz and texture_M.rbz files to eliminate duplicated DDS files between skybox rbz file.
+- RBR/RSF uses the generated TextureFilenameMap<MapID>.ini file at stage load time to instruct RBR to use a remapped texture DDS file instead of the deleted duplicated copy. The remap link goes even between textures_O.rbz and texture_M.rbz files to eliminate duplicated DDS files between skybox rbz files.
 
 Note! Identical file here means that the file content is one-on-one identical in a binary level (not a filename match).
  
