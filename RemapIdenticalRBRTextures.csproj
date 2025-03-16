@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <Authors>mika-n and RallySimFans team</Authors>
     <Company>www.RallySimFans.hu</Company>
     <Description>Identifies duplicated textures in Richard Burns Rally RBZ files, removes duplicates and creates a symbolic link between the removed file and the one preserved copy of the identical texture file.</Description>
